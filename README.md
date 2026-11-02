@@ -29,3 +29,10 @@ O link gerado poderá ser enviado à professora e continuará funcionando com o 
 python -m pip install -r requirements.txt
 python -m streamlit run streamlit_app.py
 ```
+
+## IntegraÃ§Ã£o acadÃªmica reproduzÃ­vel
+
+O cÃ³digo do pipeline local (ANSYS/PyDPF -> CSV -> MySQL -> FastAPI -> Streamlit),
+com importadores de dois modelos de apoio, estÃ¡ em [`tcc_api/`](tcc_api/).
+Consulte o [guia de execuÃ§Ã£o local](documentacao/INTEGRACAO_LOCAL.md).
+A demonstraÃ§Ã£o pÃºblica (`streamlit_app.py`) continua independente e lÃª `resultados_ansys.csv`.

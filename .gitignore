@@ -1,3 +1,23 @@
 __pycache__/
 .venv/
 *.pyc
+
+# Ambiente/credenciais/dados locais - NAO publicar
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+*.p12
+*.pem
+*.key
+*.cer
+*.mobileprovision
+*.sql.bak
+*backup*.sql
+*.rst
+malhas/
+malhas_apoios_revisados/
+_ProjectScratch/

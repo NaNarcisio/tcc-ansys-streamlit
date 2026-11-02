@@ -1,0 +1,11 @@
+# Versões encontradas no ambiente virtual enviado; instalar em Python compatível.
+ansys-dpf-core==0.16.1
+ansys-dpf-post==0.12.0
+numpy==2.5.2
+pandas==3.0.5
+streamlit==1.64.0
+altair==6.3.0
+fastapi==0.141.1
+uvicorn==0.53.0
+mysql-connector-python==26.7.0
+matplotlib==3.11.1
