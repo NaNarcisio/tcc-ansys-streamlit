@@ -1,0 +1,6 @@
+simulacao_id,simulacao,viga,material,tamanho_malha_mm,origem_dados,tensao_von_mises_max_mpa,deslocamento_total_max_mm,deslocamento_y_min_mm,deslocamento_y_max_mm,fator_seguranca_min
+rev-100,ANSYS - apoios revisados - malha 100 mm,Viga retangular 3000 x 50 x 150 mm,ASTM A36,100.0,ansys_rst_rev,48.040556750044296,3.01683018199352,-3.0168301779585343,0.00033582609353376066,5.20393635945465
+rev-75,ANSYS - apoios revisados - malha 75 mm,Viga retangular 3000 x 50 x 150 mm,ASTM A36,75.0,ansys_rst_rev,48.025000780863024,3.0168333672879832,-3.016833363252999,0.0003547578513243992,5.205621987196715
+rev-50,ANSYS - apoios revisados - malha 50 mm,Viga retangular 3000 x 50 x 150 mm,ASTM A36,50.0,ansys_rst_rev,48.0256773112657,3.0169632283118863,-3.0169632242770823,0.0003941792405813531,5.205548656392522
+rev-25,ANSYS - apoios revisados - malha 25 mm,Viga retangular 3000 x 50 x 150 mm,ASTM A36,25.0,ansys_rst_rev,48.03082473107374,3.01699225835575,-3.016992254320975,0.00040372230895291346,5.204990782476851
+rev-10,ANSYS - apoios revisados - malha 10 mm,Viga retangular 3000 x 50 x 150 mm,ASTM A36,10.0,ansys_rst_rev,48.03210360011898,3.0169945132621265,-3.016994509227342,0.0004189381477462134,5.204852198049072

@@ -7,7 +7,9 @@ import pandas as pd
 import streamlit as st
 
 
-ARQUIVO_DADOS = Path(__file__).with_name("resultados_ansys.csv")
+ARQUIVO_DADOS_ORIGINAL = Path(__file__).with_name("resultados_ansys.csv")
+ARQUIVO_DADOS_REVISADO = Path(__file__).with_name("resultados_ansys_revisados.csv")
+
 
 COR_FUNDO = "#0A1420"
 COR_PAINEL = "#0F1D2E"
@@ -386,7 +388,7 @@ def carregar_resultados():
         item
         for item in dados.to_dict(orient="records")
         if str(item.get("origem_dados", "")).strip().lower()
-        == "ansys_rst"
+        == ORIGEM_DADOS
     ]
 
     if not resultados:
@@ -518,6 +520,23 @@ def obter_status(fator_seguranca):
 
     return "SEGURO", "safe", "status-safe"
 
+
+# --- SELECAO_PUBLICA_DE_MODELO_TCC ---
+# Ambos os modelos usam snapshots CSV no Streamlit Community Cloud.
+# MySQL e FastAPI continuam exclusivos do fluxo LOCAL do TCC.
+FONTES_TCC = {
+    "Apoios revisados (modelo final)":
+        (ARQUIVO_DADOS_REVISADO, "ansys_rst_rev"),
+    "Apoios originais (comparacao)":
+        (ARQUIVO_DADOS_ORIGINAL, "ansys_rst"),
+}
+FONTE_ESCOLHIDA = st.sidebar.selectbox(
+    "Condicoes de apoio do modelo ANSYS",
+    options=list(FONTES_TCC),
+    index=0,
+)
+ARQUIVO_DADOS, ORIGEM_DADOS = FONTES_TCC[FONTE_ESCOLHIDA]
+st.sidebar.caption("Publicacao: dados CSV; nao acessa MySQL ou FastAPI.")
 
 resultados = carregar_resultados()
 
